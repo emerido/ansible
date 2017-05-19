@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: Add authorized key
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '/Users/Emerido/.ssh/id_rsa.pub') }}"
