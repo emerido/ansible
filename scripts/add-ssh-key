@@ -1,0 +1,6 @@
+#!/bin/sh
+mkdir -p ~/.ssh
+
+echo -e "$1" | tr -d '\r' > ~/.ssh/id_rsa
+
+chmod -R 700 ~/.ssh
